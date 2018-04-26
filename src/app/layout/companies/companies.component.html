@@ -1,15 +1,16 @@
 <app-page-header [heading]="'Firmy'" [icon]="'fa-table'"></app-page-header>
-<div class="card-header">
-  Basic example
-</div>
+
+<button type="button" class="btn btn btn-primary"><i class="fa fa-fw fa-plus"></i> Dodaj</button>
+
 <div class="card-body table-responsive">
-  <table class="table">
+  <table class="table table-hover table-striped">
       <thead>
       <tr>
           <th>#</th>
           <th>Nazwa</th>
           <th>Pełna nazwa</th>
           <th>Typ</th>
+          <th>Edytuj</th>
       </tr>
       </thead>
       <tbody>
@@ -18,6 +19,7 @@
           <td>{{ company.shortName }}</td>
           <td>{{ company.name }}</td>
           <td>{{ company.type }}</td>
+          <td><i class="fa fa-fw fa-edit"></i></td>
       </tr>
       </tbody>
   </table>
