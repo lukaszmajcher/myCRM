@@ -1,6 +1,9 @@
 import { Company } from './../models/Company';
 import { Injectable } from '@angular/core';
 
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
+
 @Injectable()
 export class CompanyService {
 
@@ -15,8 +18,12 @@ export class CompanyService {
    }
 
 
-  getAll(){
-    return this.companies;
+  getAll(): Observable<Company[]>{
+    return of(this.companies);
+  }
+
+  getCompany(id: number): Observable<Company>{
+    return of(this.companies.find(c => c.id == id))
   }
 
 }

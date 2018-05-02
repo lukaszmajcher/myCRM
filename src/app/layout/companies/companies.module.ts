@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 
 import { CompaniesRoutingModule } from './companies-routing.module';
 import { CompaniesComponent } from './companies.component';
+import { CompanyDetailComponent } from './company-detail/company-detail.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,7 @@ import { CompaniesComponent } from './companies.component';
     CompaniesRoutingModule,
     PageHeaderModule
   ],
-  declarations: [CompaniesComponent],
+  declarations: [CompaniesComponent, CompanyDetailComponent],
   providers: [CompanyService],
 })
 export class CompaniesModule { }
